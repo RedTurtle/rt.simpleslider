@@ -98,7 +98,10 @@ class SliderUtils(object):
             if INavigationRoot.providedBy(obj): #Plone site return default view
                 default = obj.getDefaultPage()
                 if default:
-                    obj = obj[default]
+                    try:
+                        obj = obj[default]
+                    except KeyError:
+                        pass
 
             extended = getattr(obj, 'getField', None)
             if extended:

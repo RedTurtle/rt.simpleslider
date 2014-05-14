@@ -133,6 +133,9 @@ class BrainSliderSource(GenericSliderSource):
     def getImage(self):
         return self.wrapper.getImage()
 
+    def getURL(self):
+        return self.brain.getURL()
+
     @property
     def caption_template(self):
         return self.wrapper.caption_template

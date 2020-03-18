@@ -9,9 +9,10 @@ from rt.simpleslider.interfaces import ISliderUtils
 
 JS_TEMPLATE = """
     (function($) {
+        var responsive_ratio = $('#simpleslider').outerWidth() / %(width)s;
         $('#simpleslider').bjqs({
-              'height' : %(height)s,
-              'width' : %(width)s,
+              'height' : %(height)s * responsive_ratio,
+              'width' : $('#simpleslider').outerWidth(),
               'usecaptions' : false,
               'responsive' : true
         });

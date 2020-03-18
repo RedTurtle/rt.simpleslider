@@ -12,11 +12,11 @@ Using rt.simpleslider
 ---------------------
 
 Simpleslider adds support for basic Plone types such as:
- * `Image`
- * `Topic`
- * `Folder`
- * `collective.contentleadimage`
- * `redturtle.smartlink`
+ * ``Image``
+ * ``Topic``
+ * ``Folder``
+ * ``collective.contentleadimage``
+ * ``redturtle.smartlink``
 
 Depends which type of object you will choose slider will generate proper HTML
 snippet for you. In case of `ATImage` or objects that provides `ILeadImageable` 
@@ -29,7 +29,8 @@ Viewlet
 
 Slider registers one viewlet to render the basic slider, default for `IAboveContent`:
 
-```xml
+.. code-block:: xml
+
     <browser:viewlet
         for="*"
         name="rt.simpleslider.slider"
@@ -39,4 +40,4 @@ Slider registers one viewlet to render the basic slider, default for `IAboveCont
         layer="..interfaces.IBrowserLayer"
         permission="zope2.View"
     />
-```
+
